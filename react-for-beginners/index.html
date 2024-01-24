@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 
 </head>
-    <body></body>
+    <body>
+        <div id="root"></div>
+    </body>
     <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-    <script></script>
+    <script>
+        const root = document.getElementById("root");
+        const span = React.createElement("span");
+        ReactDOM.render(span, root);
+    </script>
 </html>
