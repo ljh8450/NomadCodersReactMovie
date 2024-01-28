@@ -9,12 +9,12 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
         const root = document.getElementById("root");
-        const Title = (
+        const Title = () => (
             <h3 id="title" onMouseEnter={() => console.log("Mouse enter.")}>
                 "Hello I'm a title"
             </h3>
         );
-        const Button = (
+        const Button = () => (
             <button
                 style = {{
                     backgroundColor: "tomato",
@@ -24,7 +24,12 @@
             CLick me
             </button>
         );
-        const Container = <div>Title Button</div>
-        ReactDOM.render(Container, root);
+        const Container = () => (
+            <div>
+                <Title />
+                <Button />
+            </div>
+        );
+        ReactDOM.render(<Container />, root);
     </script>
 </html>
