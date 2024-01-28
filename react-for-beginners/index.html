@@ -8,19 +8,20 @@
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script>
         const root = document.getElementById("root");
-        const h3 = React.createElement("h3", {
-            onMouseEnter: (mouseEnter) => console.log("Mouse enter."),
-        }, "Hello I'm a span");
-        const btn = React.createElement(
-            "button", 
-            {
-                onClick: (clicked) => console.log("I'm clicked."),
-                style: {
+        const Title = <h3 id="title" onMouseEnter={() => console.log("Mouse enter.")}>"Hello I'm a title"</h3>
+        // const h3 = React.createElement("h3", {
+        //     onMouseEnter: (mouseEnter) => console.log("Mouse enter."),
+        // }, "Hello I'm a title");
+        const Button = (
+            <button
+                style = {{
                     backgroundColor: "tomato",
-                },
-            }, 
-            "Click me"
-        );
+                }}
+                onClick={() => console.log("I'm clicked.")}
+            >
+            CLick me
+            </button>
+        )
         const container = React.createElement("div", null, [h3, btn]);
         ReactDOM.render(container, root);
     </script>
