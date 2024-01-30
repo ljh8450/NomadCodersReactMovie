@@ -10,11 +10,10 @@
     <script type="text/babel">
         const root = document.getElementById("root");
         function App() {
-            const data = React.useState(0);
-            console.log(data);
+            const [counter, modifier] = React.useState(0);
             return (
             <div>
-                <h3>Total clicks : 0</h3>
+                <h3>Total clicks : {counter}</h3>
                 <button>Click me</button>
             </div>
         );
